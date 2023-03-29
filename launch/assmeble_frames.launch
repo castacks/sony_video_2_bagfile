@@ -1,0 +1,18 @@
+<launch>
+    <arg name="image_folder"  default="/path/to/image/folder"/>
+    <arg name="out_bag_fn"    default="/path/to/bagfile.bag"/>
+    <arg name="time_delta_s"  default="0"/>
+    <arg name="time_delta_ns" default="100000000"/>
+
+    <node pkg="sony_video_2_bagfile" 
+          type="assemble_frames_2_bagfile.py" 
+          name="frames_2_bag_node"
+          output="screen"
+          required="true" >
+        
+        <param name="image_folder"  value="$(arg image_folder)"/>
+        <param name="out_bag_fn"    value="$(arg out_bag_fn)"/>
+        <param name="time_delta_s"  value="$(arg time_delta_s)"/>
+        <param name="time_delta_ns" value="$(arg time_delta_ns)"/>
+    </node>
+</launch>
