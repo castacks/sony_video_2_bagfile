@@ -12,13 +12,23 @@
 
 # Extract image frames from the video
 
+Extracting image frames does not require ROS support, can be done locally as long as we have OpenCV support.
+
+```bash
+cd <sony_video_2_bagfile>/script/
+python3 extract_frames_from_video.py \
+    <output folder> \
+    <input video filename> \
+    --skip_frames 14
+```
+
 # Assemble image frames to a bagfile
 
 Do something like
 
 ```bash
 roslaunch sony_video_2_bagfile assmeble_frames.launch \
-    image_folder:=/home/yaoyuh/Playground/sony/calib_canon/extracted_frames \
-    out_bag_fn:=/home/yaoyuh/Playground/sony/calib_canon/assembled_bagfile/cannon_20230328.bag
+    image_folder:=<folder of the images> \
+    out_bag_fn:=<full path of the output filename>
 ```
 
