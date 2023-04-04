@@ -15,7 +15,7 @@
 Extracting image frames does not require ROS support, can be done locally as long as we have OpenCV support.
 
 ```bash
-cd <sony_video_2_bagfile>/script/
+cd <sony_video_2_bagfile>/scripts/
 python3 extract_frames_from_video.py \
     <output folder> \
     <input video filename> \

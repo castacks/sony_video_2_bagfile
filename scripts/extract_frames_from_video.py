@@ -26,6 +26,7 @@ def extract_frames(output_folder, video_path, skip_frames=0):
         
         frame_path = f"{output_folder}/frame_{frame_count:06d}.jpg"
         cv2.imwrite(frame_path, frame)
+        print(f'{frame_path} written. ')
     
     cap.release()
 
