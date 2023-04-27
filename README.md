@@ -12,14 +12,28 @@
 
 # Extract image frames from the video
 
-Extracting image frames does not require ROS support, can be done locally as long as we have OpenCV support.
+Extracting image frames does not require ROS support, can be done locally as long as we have OpenCV support. There are two ways to extract image: fixed interval or total number of frames.
+
+To do fixed interval extraction
 
 ```bash
 cd <sony_video_2_bagfile>/scripts/
 python3 extract_frames_from_video.py \
     <output folder> \
     <input video filename> \
+    --frame_mode "fixed-skip" \
     --skip_frames 14
+```
+
+To do extract total number of frames
+
+```bash
+cd <sony_video_2_bagfile>/scripts/
+python3 extract_frames_from_video.py \
+    <output folder> \
+    <input video filename> \
+    --frame_mode "total-frames" \
+    --total_frames 100
 ```
 
 # Assemble image frames to a bagfile
