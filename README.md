@@ -12,7 +12,8 @@
 
 # Extract image frames from the video
 
-Extracting image frames does not require ROS support, can be done locally as long as we have OpenCV support. There are two ways to extract image: fixed interval or total number of frames.
+Extracting image frames does not require ROS support, can be done locally as long as we have OpenCV 
+support. There are two ways to extract image: fixed interval or total number of frames.
 
 To do fixed interval extraction
 
